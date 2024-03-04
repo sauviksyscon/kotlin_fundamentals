@@ -1,11 +1,24 @@
 fun main() {
     //use if else
-    useIfElse("tiger");
+    //useIfElse("tiger");
 
     //use when
-    useWhen("tiger");
+    //useWhen("tiger");
 
-    useWhen2(30);
+    //useWhen2(30);
+
+    var result: String = getAge(6)
+    println(result)
+}
+
+fun getAge(age: Int): String {
+    when (age) {
+        in 1..8 -> return "You are child."
+        in 9 until 18 -> return "You are boy/girl."
+        in 18 until 60 -> return "You are adult."
+        in 60..80 -> return "you are senior."
+        else -> return "age not applicable."
+    }
 }
 
 fun useWhen2(input: Int) {
@@ -19,8 +32,6 @@ fun useWhen2(input: Int) {
         else -> "Not found"
     }
     setResult(result)
-
-
 }
 
 fun useWhen(animal: String) {
