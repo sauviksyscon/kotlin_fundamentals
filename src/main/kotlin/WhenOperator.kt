@@ -9,6 +9,9 @@ fun main() {
 
     var result: String = getAge(6)
     println(result)
+
+    var grade = marks(95)
+    println(grade);
 }
 
 fun getAge(age: Int): String {
@@ -56,4 +59,17 @@ fun useIfElse(animal: String) {
         setResult("Animal is tiger.")
     else
         setResult("Animal not found.")
+}
+
+fun marks(number: Int): String {
+    var result = when(number){
+        in 1..29 -> "Not Qualified"
+        in 30..59 ->"Grade C"
+        in  60 until 80 -> "Grade B"
+        in  80 until 90 -> "Grade A"
+        in  90 until 95 -> "Grade AA"
+        else -> "Grade AA+"
+    }
+
+    return result
 }

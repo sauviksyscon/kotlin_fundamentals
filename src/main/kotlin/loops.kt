@@ -1,7 +1,8 @@
 fun main() {
     var input: Int = 4
     //useWhile(input)
-    useFor(input)
+    //useFor(input)
+    multiplicationTable(input)
 }
 
 fun useFor(input: Int) {
@@ -25,4 +26,14 @@ fun useWhile(input: Int) {
         i++
     }
 
+}
+
+fun multiplicationTable(number: Int) {
+    println("Multiplication table of $number")
+    /*for (i in 1..10) {
+        println("$number * $i = ${number * i}")
+    }*/
+    for (i in 1 until 11) {
+        println("$number * $i = ${number * i}")
+    }
 }
